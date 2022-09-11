@@ -19,8 +19,13 @@ public class SelectionManager : MonoBehaviour
 
     public void SetSelection(GameObject selection)
     {
+        if (currentSelection != null) currentSelection.GetComponent<Outline>().enabled = false;
+
         this.currentSelection = selection;
-        Debug.Log("Hex Selected at :" + selection?.transform.position);
+
+        if (currentSelection != null) currentSelection.GetComponent<Outline>().enabled = true;
+
+        //Debug.Log("Hex Selected at :" + selection?.transform.position);
         OnHexSelection?.Invoke(this, new OnHexSelectionArgs() { currentSelection = this.currentSelection });
     }
 

@@ -3,7 +3,17 @@ guid: 99564602739716b4fb482ecb15fde734
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirt
+    second: {fileID: 2100000, guid: a4c0e27a859cb394593607a8bc9efbc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stone
+    second: {fileID: 2100000, guid: 5bd9ae3002bd1b247bb755c5a1b9934e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -32,7 +42,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
