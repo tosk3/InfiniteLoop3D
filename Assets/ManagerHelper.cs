@@ -6,5 +6,8 @@ using UnityEngine;
 public class ManagerHelper : MonoBehaviour
 {
     public SelectionManager selectionManager;
-    public HexSpawner hexSpawner;   
+    public HexSpawner hexSpawner;      
+    public DayCycle dayManager;
+    public PlayerPawn playerPawn;
+   
 }

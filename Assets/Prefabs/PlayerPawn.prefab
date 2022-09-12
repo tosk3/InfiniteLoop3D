@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5a11e9473665b4e90c2dc1e31839e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 0}
+  helper: {fileID: 0}
   currentSelection: {fileID: 0}
   currentHexPosition: {fileID: 0}
   currentHexNeighbours: []
@@ -53,6 +53,8 @@ MonoBehaviour:
   m_movementTime: 0.5
   m_yOffset: 2
   m_radiusModifier: 1.5
+  currentCrystalAmount: 0
+  crystalAmountPerDay: 2
 --- !u!1001 &8479991734502870759
 PrefabInstance:
   m_ObjectHideFlags: 0

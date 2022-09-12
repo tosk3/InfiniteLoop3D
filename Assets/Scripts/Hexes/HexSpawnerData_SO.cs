@@ -9,4 +9,6 @@ public class HexSpawnerData_SO : ScriptableObject
     public float gridXPosOffset;
     public float gridYPosOffset;
 
+    public int[] chanceOfSpawnWeight;
+    public bool[] chanceOfSpawn;
 }

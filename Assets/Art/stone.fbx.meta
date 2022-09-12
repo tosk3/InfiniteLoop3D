@@ -8,12 +8,14 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: dirt
-    second: {fileID: 2100000, guid: a4c0e27a859cb394593607a8bc9efbc3, type: 2}
+    second: {fileID: -6126091556477775235, guid: a21e7069e40814f41bf28d12281c6cd5,
+      type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: stone
-    second: {fileID: 2100000, guid: 5bd9ae3002bd1b247bb755c5a1b9934e, type: 2}
+    second: {fileID: 7555185752953191562, guid: 79082cce56c4559489cde17769948869,
+      type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

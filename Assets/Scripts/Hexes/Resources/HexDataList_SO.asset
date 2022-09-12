@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2491d2c2676b8e4ba6961e343dc717f, type: 3}
+  m_Name: HexDataList_SO
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 11400000, guid: f28b11f355bf01a48947b5a8edf5bd52, type: 2}
+  - {fileID: 11400000, guid: 8bf5827cec05fba438a45fd61aea042c, type: 2}
+  - {fileID: 11400000, guid: d08d2009ced7c9944bebe5ca9f80967b, type: 2}
+  chanceWeights: 3c0000001e0000000a000000

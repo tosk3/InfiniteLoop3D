@@ -9,8 +9,16 @@ public class DayCycle : MonoBehaviour
 
     //memebers
     [SerializeField] private float m_dayTimer;
-    [SerializeField] private float m_dayCount;
-
+    [SerializeField] private int m_dayCount;
+    public event System.EventHandler<OnDayPassedArgs> OnDayPassed;
+    public class OnDayPassedArgs : System.EventArgs
+    {
+        public int dayCount;
+    }
+    private void Start()
+    {
+        dayData_SO = (DayData_SO)Resources.Load(typeof(DayData_SO).ToString());
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +32,7 @@ public class DayCycle : MonoBehaviour
         if(m_dayTimer > dayData_SO.dayLength)
         {
             AddDay();
+            OnDayPassed?.Invoke(this, new OnDayPassedArgs() { dayCount = m_dayCount });
             m_dayTimer = 0f;
         }
         else
@@ -35,5 +44,10 @@ public class DayCycle : MonoBehaviour
     {
         m_dayCount++;
         //spawnEvent
+    }
+
+    public float DayProgress()
+    {
+        return m_dayTimer / dayData_SO.dayLength;
     }
 }

@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: HexRarityNormal_SO
   m_EditorClassIdentifier: 
   rarity: 1
-  hexModels: []
-  minTimeVariance: {x: 0, y: 0}
-  maxTimeVariance: {x: 0, y: 0}
+  hexModels:
+  - {fileID: 919132149155446097, guid: 25bdb87cc51f79c4ebc2fb8f22345962, type: 3}
+  - {fileID: 919132149155446097, guid: 7902746dc7a32bf4f8fc8ae1400c8324, type: 3}
+  - {fileID: 919132149155446097, guid: 79082cce56c4559489cde17769948869, type: 3}
+  - {fileID: 919132149155446097, guid: bf8eeb080dd01d84db38935d1eec3d86, type: 3}
+  - {fileID: 919132149155446097, guid: 998df88d187c763418daf65ac65c2668, type: 3}
+  - {fileID: 919132149155446097, guid: 714b64f1e1ca9bd428149f19bed2f394, type: 3}
+  - {fileID: 919132149155446097, guid: 078df744c29a85e4fb1d55d548a7ef1e, type: 3}
+  - {fileID: 919132149155446097, guid: bc1781d68641e8b409fd56e56b68bd34, type: 3}
+  - {fileID: 919132149155446097, guid: 527896fcb5f0f6542965d405347b7265, type: 3}
+  crystalAmountVariance: {x: 1, y: 2}
+  minTimeVariance: {x: 1, y: 2}
+  maxTimeVariance: {x: 3, y: 5}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerPawn : MonoBehaviour
 {
@@ -11,9 +12,19 @@ public class PlayerPawn : MonoBehaviour
     [SerializeField] private List<GameObject> currentHexNeighbours;
     [SerializeField] private int hexLayerNumber;
     //members
+    public event System.EventHandler<OnCrystalHarvestArgs> OnCrystalHarvest;
+    public class OnCrystalHarvestArgs : System.EventArgs
+    {
+        public GameObject playerHexPosition;
+        public float crystalAmount;
+
+    }
+
     [SerializeField] private float m_movementTime;
     [SerializeField] private float m_yOffset;
     [SerializeField] private float m_radiusModifier;
+    [SerializeField] private float currentCrystalAmount;
+    [SerializeField] private float crystalAmountPerDay;
 
 
 
@@ -22,7 +33,24 @@ public class PlayerPawn : MonoBehaviour
     {
         helper.selectionManager.OnHexSelection += SelectionManager_OnHexSelection;
         helper.hexSpawner.OnHexSpawn += HexSpawner_OnHexSpawn;
+        helper.dayManager.OnDayPassed += DayManager_OnDayPassed;
         SetupPawn();
+        AddNeighbours();
+    }
+
+    private void DayManager_OnDayPassed(object sender, DayCycle.OnDayPassedArgs e)
+    {
+        if (currentHexPosition == null)
+        {
+            SceneManager.LoadScene(0);
+            //lose game;
+        }
+        currentCrystalAmount -= crystalAmountPerDay;
+        if (currentCrystalAmount <= 0)
+        {
+            //lose game
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void HexSpawner_OnHexSpawn(object sender, HexSpawner.OnSpawnArgs e)
@@ -59,6 +87,8 @@ public class PlayerPawn : MonoBehaviour
             yield return null;
         }
         currentHexPosition = currentSelection;
+        //OnSelectionHex?.Invoke(this, new OnSelectionHexArgs() { playerHexPosition = this.currentHexPosition });
+        helper.hexSpawner.AttemptSpawnNeighboursHexes(currentHexPosition.transform.position);
         AddNeighbours();
 
     }
@@ -93,7 +123,27 @@ public class PlayerPawn : MonoBehaviour
     private void SetupPawn()
     {
         currentSelection = currentHexPosition;
+        currentCrystalAmount = 5;
         MovePawnAndSearch();
         currentSelection = null;
+    }
+
+    public void HarvestCrystal()
+    {
+        if (currentHexPosition.GetComponent<Hex>() == null) return;
+        if (!currentHexPosition.GetComponent<Hex>().GetHexData().isLooted)
+        {
+            currentCrystalAmount += currentHexPosition.GetComponent<Hex>().GetHexData().crystalAmount;
+            OnCrystalHarvest?.Invoke(this,new OnCrystalHarvestArgs() { crystalAmount = currentCrystalAmount,playerHexPosition  = currentHexPosition });
+            //TotoUtils.CreateWorldTextMesh(currentHexPosition.GetComponent<Hex>().GetHexData().crystalAmount.ToString(), null, currentHexPosition.transform.position);
+        }
+    }
+    public float GetRemainingCrystalTime()
+    {
+        return currentCrystalAmount / crystalAmountPerDay;
+    }
+    public float GetCrystalAmount()
+    {
+        return currentCrystalAmount;
     }
 }

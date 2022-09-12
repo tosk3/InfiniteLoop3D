@@ -7,9 +7,11 @@ public class HexSpawner : MonoBehaviour
 {
     public event System.EventHandler<OnSpawnArgs> OnHexSpawn;
     public class OnSpawnArgs { public List<GameObject> spawnedHexes; }
+
     [SerializeField] private HexSpawnerData_SO hexSpawnerData_SO;
     [SerializeField] private ManagerHelper helper;
     [SerializeField] private GameObject selectedHex;
+    [SerializeField] private GameObject baseHex;
 
     [SerializeField] private List<GameObject> hexList;
     [SerializeField] private float gridXOffset;
@@ -22,6 +24,18 @@ public class HexSpawner : MonoBehaviour
         gridXOffset = hexSpawnerData_SO.hexPrefab.GetComponentInChildren<Renderer>().bounds.size.x ;
         gridYOffset = hexSpawnerData_SO.hexPrefab.GetComponentInChildren<Renderer>().bounds.size.z ;
         helper.selectionManager.OnHexSelection += SelectionManager_OnHexSelection;
+        helper.dayManager.OnDayPassed += DayManager_OnDayPassed;
+        AttemptSpawn(baseHex.transform.position);
+    }
+
+    private void DayManager_OnDayPassed(object sender, DayCycle.OnDayPassedArgs e)
+    {
+        AttemptSpawn(baseHex.transform.position);
+    }
+
+    public void AttemptSpawn(Vector3 pos)
+    {
+        AttemptSpawnNeighboursHexes(pos);
     }
 
     private void SelectionManager_OnHexSelection(object sender, SelectionManager.OnHexSelectionArgs e)
@@ -36,11 +50,35 @@ public class HexSpawner : MonoBehaviour
         List<Vector3> neighbours = CreateNeighbourPositions(pos);
         foreach (Vector3 neighbor in neighbours)
         {
-            if(!Physics.CheckSphere(neighbor, hexSpawnerData_SO.hexPrefab.GetComponent<SphereCollider>().radius))
+            if (!Physics.CheckSphere(neighbor, hexSpawnerData_SO.hexPrefab.GetComponent<SphereCollider>().radius))
             {
-                hexList.Add(Instantiate(hexSpawnerData_SO.hexPrefab, new Vector3(neighbor.x, 0, neighbor.z), Quaternion.identity));
-            }           
+                GameObject hex = Instantiate(hexSpawnerData_SO.hexPrefab, new Vector3(neighbor.x, 0, neighbor.z), Quaternion.identity);
+                hex.GetComponent<Hex>().SetupHex(helper, HexGenerator.CreateRandomHex(helper, (HexDataList_SO)Resources.Load(typeof(HexDataList_SO).ToString())));
+                hexList.Add(hex);
+            }
         }
+        OnHexSpawn?.Invoke(this, new OnSpawnArgs() { spawnedHexes = hexList });
+    }
+    public void AttemptSpawnNeighboursHexes(Vector3 pos)
+    {
+        //Find Neighbour locations
+        //for each neighbour loc
+        List<Vector3> neighbours = CreateNeighbourPositions(pos);
+        foreach (Vector3 neighbor in neighbours)
+        {
+            bool spawn = hexSpawnerData_SO.chanceOfSpawn[TotoUtils.RandomIntBasedOnWeight(hexSpawnerData_SO.chanceOfSpawnWeight, 0)];
+            Debug.Log(spawn);
+            if (hexSpawnerData_SO.chanceOfSpawn[TotoUtils.RandomIntBasedOnWeight(hexSpawnerData_SO.chanceOfSpawnWeight, 0)])
+            {
+                if (!Physics.CheckSphere(neighbor, hexSpawnerData_SO.hexPrefab.GetComponent<SphereCollider>().radius))
+                {
+                    GameObject hex = Instantiate(hexSpawnerData_SO.hexPrefab, new Vector3(neighbor.x, 0, neighbor.z), Quaternion.identity);
+                    hex.GetComponent<Hex>().SetupHex(helper, HexGenerator.CreateRandomHex(helper, (HexDataList_SO)Resources.Load(typeof(HexDataList_SO).ToString())));
+                    hexList.Add(hex);
+                }
+            }  
+        }
+        OnHexSpawn?.Invoke(this, new OnSpawnArgs() { spawnedHexes = hexList });
     }
     public void SpawnNeighboursHexes()
     {
@@ -51,7 +89,9 @@ public class HexSpawner : MonoBehaviour
         {
             if (!Physics.CheckSphere(neighbor, hexSpawnerData_SO.hexPrefab.GetComponent<SphereCollider>().radius))
             {
-                hexList.Add(Instantiate(hexSpawnerData_SO.hexPrefab, new Vector3(neighbor.x, 0, neighbor.z), Quaternion.identity));
+                GameObject hex = Instantiate(hexSpawnerData_SO.hexPrefab, new Vector3(neighbor.x, 0, neighbor.z), Quaternion.identity);
+                hex.GetComponent<Hex>().SetupHex(helper, HexGenerator.CreateRandomHex(helper,(HexDataList_SO)Resources.Load(typeof(HexDataList_SO).ToString())));
+                hexList.Add(hex);
             }
         }
         OnHexSpawn?.Invoke(this, new OnSpawnArgs() { spawnedHexes = hexList });

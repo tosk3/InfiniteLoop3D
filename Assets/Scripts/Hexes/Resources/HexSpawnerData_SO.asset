@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ed60664a1ff8049be79f8ff0add1b9, type: 3}
   m_Name: HexSpawnerData_SO
   m_EditorClassIdentifier: 
-  hexPrefab: {fileID: 1705613815480488351, guid: 3b71fef23b201024a9968c945e86035a,
+  hexPrefab: {fileID: 1705613815480488351, guid: ebc78343e0208d2459c082d906d7f7e4,
     type: 3}
   gridXPosOffset: 0.05
   gridYPosOffset: 0.05
+  chanceOfSpawnWeight: 5000000014000000
+  chanceOfSpawn: 0001
