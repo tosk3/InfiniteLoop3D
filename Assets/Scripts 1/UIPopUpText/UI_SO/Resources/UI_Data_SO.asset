@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb85e592902349545ad161188d3db8b3, type: 3}
+  m_Name: UI_Data_SO
+  m_EditorClassIdentifier: 
+  entryCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  exitCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  bumpCurveUp:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  bumpCurveDown:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  uiAnimationSpeed: 0
+  disappearTimerLength: 2
+  disappearingSpeed: 5
+  moveUpSpeed: 0.2
+  positionOffset: {x: 0, y: 1, z: 0}
+  rotationOffset: {x: 0.34202012, y: 0, z: 0, w: 0.9396926}
+  textPositiveColour: {r: 0, g: 0.4195919, b: 1, a: 0}
+  textNegativeColour: {r: 0, g: 0.41960785, b: 1, a: 0}
+  pf_progressDislay: {fileID: 0}
+  progressSpawnOffset: {x: 0, y: 0, z: 0}
+  progressBarStartColor: {r: 0, g: 0, b: 0, a: 0}
+  progressBarEndColor: {r: 0, g: 0, b: 0, a: 0}
+  progressSpeed: 0
+  progressBarEndX: 0

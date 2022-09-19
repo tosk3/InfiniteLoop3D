@@ -1,0 +1,498 @@
+{
+  "version": "0.8.0-alpha.7.2",
+  "pan": {
+    "X": 747.9007,
+    "Y": 234.69803
+  },
+  "zoom": 0.6166300773620605,
+  "currentPage": 0,
+  "pages": [
+    {
+      "id": 0,
+      "pan": {
+        "X": 747.9008,
+        "Y": 234.698
+      },
+      "zoom": 0.6166300773620605,
+      "cards": [
+        {
+          "id": 0,
+          "rect": {
+            "X": 224,
+            "Y": -416,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "tiles last certain time. then get deleted",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 1,
+          "rect": {
+            "X": 288,
+            "Y": -320,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "character  can go one tile at a time.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 2,
+          "rect": {
+            "X": 288,
+            "Y": -256,
+            "W": 256,
+            "H": 128
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "needs to have a button to scout and a button to travel",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 3,
+          "rect": {
+            "X": -128,
+            "Y": -32,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "Base",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 4,
+          "rect": {
+            "X": 256,
+            "Y": -32,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "Tiles",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 5,
+          "rect": {
+            "X": 704,
+            "Y": -32,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "temporal storms ",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 6,
+          "rect": {
+            "X": 1152,
+            "Y": -32,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "combat",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 7,
+          "rect": {
+            "X": -96,
+            "Y": 0,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "needs materials to run",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 8,
+          "rect": {
+            "X": 288,
+            "Y": 0,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "basic tile",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 9,
+          "rect": {
+            "X": 768,
+            "Y": 0,
+            "W": 256,
+            "H": 160
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "during a storm the tiles change quicker, but have a higher rate to be a good tile.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 10,
+          "rect": {
+            "X": 1184,
+            "Y": 0,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "for now just dice rolls",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 11,
+          "rect": {
+            "X": 320,
+            "Y": 32,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "barren ones - just walkables - last longer",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 12,
+          "rect": {
+            "X": -64,
+            "Y": 64,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "rare crystals for not to die.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 13,
+          "rect": {
+            "X": 1216,
+            "Y": 64,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "collect loot and gear for the character",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 14,
+          "rect": {
+            "X": -96,
+            "Y": 128,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "mats to build upgrades",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 15,
+          "rect": {
+            "X": 320,
+            "Y": 128,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "can have things like forests too",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 16,
+          "rect": {
+            "X": 1216,
+            "Y": 160,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "items have rating - defence or attack",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 17,
+          "rect": {
+            "X": -64,
+            "Y": 192,
+            "W": 256,
+            "H": 128
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "temporal weather machine - faster prediction when they die",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 18,
+          "rect": {
+            "X": 288,
+            "Y": 192,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "normal",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 19,
+          "rect": {
+            "X": 320,
+            "Y": 224,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "buildings - last medium. normal loot",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 20,
+          "rect": {
+            "X": 1216,
+            "Y": 256,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "the bigger the varrience the more unreliable it is.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 21,
+          "rect": {
+            "X": -64,
+            "Y": 320,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "grounder - keeps tile longer",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 22,
+          "rect": {
+            "X": 320,
+            "Y": 320,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "mountains",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 23,
+          "rect": {
+            "X": 288,
+            "Y": 352,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "rare",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 24,
+          "rect": {
+            "X": 1216,
+            "Y": 352,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "smaller varience and ibgger numbers  = good",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 25,
+          "rect": {
+            "X": -64,
+            "Y": 384,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "lookout tower can reveal farther tiles.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 26,
+          "rect": {
+            "X": 320,
+            "Y": 384,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "crystals more common, unstable.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 27,
+          "rect": {
+            "X": 1216,
+            "Y": 448,
+            "W": 256,
+            "H": 96
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "ememies have same stats, with some randomess",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 28,
+          "rect": {
+            "X": -64,
+            "Y": 480,
+            "W": 256,
+            "H": 64
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "looking glass reveal as you walk",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 29,
+          "rect": {
+            "X": 352,
+            "Y": 480,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "crystal cave.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 30,
+          "rect": {
+            "X": 352,
+            "Y": 512,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "other cities",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 31,
+          "rect": {
+            "X": -64,
+            "Y": 544,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "crystal storage",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 32,
+          "rect": {
+            "X": 352,
+            "Y": 544,
+            "W": 256,
+            "H": 32
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "some bases",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 33,
+          "rect": {
+            "X": 320,
+            "Y": 608,
+            "W": 256,
+            "H": 128
+          },
+          "contents": "Note",
+          "properties": {
+            "description": "when hex gets instanciated it generated itself based on w/e",
+            "filepath": ""
+          }
+        }
+      ]
+    }
+  ],
+  "savedimages": {}
+}
